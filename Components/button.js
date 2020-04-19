@@ -59,7 +59,8 @@ class b extends Component {
         number: '',
         open: false,
         opend: false,
-        opens: false
+        opens: false,
+        secretCode: ''
 
     }
 
@@ -141,7 +142,8 @@ class b extends Component {
         name = this.state.name
         var number = this.state.number
         var request = '0'
-        var g=this;
+        var g = this;
+        this.state.secretCode = number + timestamp;
 
 
 
@@ -169,8 +171,8 @@ class b extends Component {
 
 
 
-                g.setState({opens:true});
-             
+                g.setState({ opens: true });
+
             });
 
 
@@ -366,11 +368,13 @@ class b extends Component {
 
 
                 <Modal open={this.state.opens} onClose={this.handleClose} closeIcon>
-
-                    <div>
-                        
                     <Modal.Header>Visit these shops to Get you Groceries</Modal.Header>
-                        <Card.Group items={items} />
+                    <div>
+                        <h3>Your Secret Code is {this.state.secretCode}</h3>
+                        <div>
+                        <h3 >These stores accept this code</h3>
+                        </div>
+                        <Card.Group style={{ margin: "10%" }} items={items} />
                     </div>
 
                 </Modal>

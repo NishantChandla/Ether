@@ -45,6 +45,9 @@ const HomepageHeading = ({ mobile }) => (
 
 
     <Container text>
+
+
+
         <Header
             as='h1'
             content='Support a family in your location'
@@ -175,6 +178,8 @@ class DesktopContainer extends Component {
                         >
                             <Container>
 
+<a href="http://covid19hack.pythonanywhere.com/">
+                            <Menu.Item position='left' as='a' >CORONA HELP</Menu.Item></a>
                                 <Menu.Item position='right'>
                                     <Menu.Item as='a' >
                                         Home
@@ -227,6 +232,8 @@ class MobileContainer extends Component {
                 >
 
 
+<a href="http://covid19hack.pythonanywhere.com/">
+                            <Menu.Item position='left' as='a' >CORONA HELP</Menu.Item></a>
                     <Menu.Item as='a' >
                         Home
                 </Menu.Item>
@@ -283,8 +290,8 @@ const HomepageLayout = () => (
             <script
                 src="https://code.jquery.com/jquery-3.5.0.js"
                 integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-                crossorigin="anonymous"></script>            
-                <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+                crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
         </Head>
         <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
@@ -389,8 +396,8 @@ const HomepageLayout = () => (
                         <Grid.Column width={3}>
                             <Header inverted as='h4' content='Services' />
                             <List link inverted>
-                                <List.Item as='a'>Locate Cases</List.Item>
-                                <List.Item as='a'>Shop</List.Item>
+                           <a href="http://covid19hack.pythonanywhere.com/map/">     <List.Item as='a'>Locate Cases</List.Item></a>
+                              <a href="http://covid19hack.pythonanywhere.com/shop/">  <List.Item as='a'>Shop</List.Item></a>
                             </List>
                         </Grid.Column>
                         {/* <Grid.Column width={3}>

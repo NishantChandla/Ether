@@ -54,7 +54,9 @@ class shop extends Component {
 
     state = {
         code: '',
-        address: ''
+        address: '',
+        openm:false,
+        openf:false
     }
 
 
@@ -66,6 +68,7 @@ class shop extends Component {
         var coder= this.state.code;
         var check=false;
         var address =this.state.address;
+        this.setState({ openm: false })
 
         //fewfwe1587287857096
 
@@ -111,6 +114,7 @@ class shop extends Component {
         );
 
 
+     this.setState({ openf: true })
 
 
         // .then(function(receipt){
@@ -120,6 +124,12 @@ class shop extends Component {
 
 
     };
+    handleClosem = () => {
+        this.setState({ openm: false })
+        this.setState({ openf: false })
+
+
+    }
 
     writeUserData = (event) => {
         event.preventDefault();
@@ -153,7 +163,7 @@ class shop extends Component {
             <div>
 
 
-                <Modal trigger={<Menu.Item as='a'>Shop Owner</Menu.Item>} closeIcon>
+                <Modal open={this.state.openm} onClose={this.handleClosem}  trigger={<Menu.Item  onClick={event => this.setState({ openm: true })} as='a'>Shop Owner</Menu.Item>} closeIcon>
                     <Modal.Header>Enter Code</Modal.Header>
                     <div style={{ margin: "7%", marginLeft: '25%' }}>
 
@@ -167,6 +177,16 @@ class shop extends Component {
                             <Button primary size='huge' color="google plus" style={{ margin: "1%", marginLeft: "20%" }} onClick={this.enter}>Submit</Button>
                         </div>
                     </div>
+
+
+                </Modal>
+                
+
+                <Modal open={this.state.openf} onClose={this.handleClosem}    onClick={eventy => this.setState({ openf: true })}>
+                    <Modal.Header>Enter Code</Modal.Header>
+                  <Container textAlign='center'>
+                      <h3 style={{margin:'5%'}}>Payment Request Received. May take Some time to excute.</h3>
+                  </Container>
 
 
                 </Modal>
