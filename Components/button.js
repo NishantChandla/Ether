@@ -11,6 +11,7 @@ import {
 import contract from '../contractins'
 import web3 from '../web3'
 import firebase from 'firebase';
+import Head from 'next/head'
 
 var items = [];
 var x = 0;

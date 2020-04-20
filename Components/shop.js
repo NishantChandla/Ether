@@ -14,6 +14,8 @@ import web3 from '../web3'
 import firebase from 'firebase';
 
 var items = [];
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyD6XXxlARtwyxuIxV8hXfDGiIjQ3Ii6QIo",
     authDomain: "corona-web-273113.firebaseapp.com",

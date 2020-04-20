@@ -127,6 +127,9 @@ class DesktopContainer extends Component {
     }
 
 
+    
+
+
     // onSubmit =async (event)=>{
 
     //     event.preventDefault();
@@ -178,8 +181,8 @@ class DesktopContainer extends Component {
                         >
                             <Container>
 
-<a href="http://covid19hack.pythonanywhere.com/">
-                            <Menu.Item position='left' as='a' >CORONA HELP</Menu.Item></a>
+                                <a href="http://covid19hack.pythonanywhere.com/">
+                                    <Menu.Item position='left' as='a' >CORONA HELP</Menu.Item></a>
                                 <Menu.Item position='right'>
                                     <Menu.Item as='a' >
                                         Home
@@ -205,8 +208,37 @@ DesktopContainer.propTypes = {
     children: PropTypes.node,
 }
 
+    // componentDidMount() {
+    //     window.addEventListener('load', f, false);
+
+
+    //     f=()=>{
+
+    //         var viewMode = document.getCookie("view-mode");
+    //         if (viewMode == "desktop") {
+    //             viewport.setAttribute('content', 'width=1024');
+    //         } else if (viewMode == "mobile") {
+    //             viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+    //         }
+    //     }
+    // }
+
 class MobileContainer extends Component {
     state = {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     handleSidebarHide = () => this.setState({ sidebarOpened: false })
 
@@ -232,8 +264,8 @@ class MobileContainer extends Component {
                 >
 
 
-<a href="http://covid19hack.pythonanywhere.com/">
-                            <Menu.Item position='left' as='a' >CORONA HELP</Menu.Item></a>
+                    <a href="http://covid19hack.pythonanywhere.com/">
+                        <Menu.Item position='left' as='a' >CORONA HELP</Menu.Item></a>
                     <Menu.Item as='a' >
                         Home
                 </Menu.Item>
@@ -292,6 +324,7 @@ const HomepageLayout = () => (
                 integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
                 crossorigin="anonymous"></script>
             <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+            <meta name="viewport" content="width=1024"/>
         </Head>
         <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
@@ -396,8 +429,8 @@ const HomepageLayout = () => (
                         <Grid.Column width={3}>
                             <Header inverted as='h4' content='Services' />
                             <List link inverted>
-                           <a href="http://covid19hack.pythonanywhere.com/map/">     <List.Item as='a'>Locate Cases</List.Item></a>
-                              <a href="http://covid19hack.pythonanywhere.com/shop/">  <List.Item as='a'>Shop</List.Item></a>
+                                <a href="http://covid19hack.pythonanywhere.com/map/">     <List.Item as='a'>Locate Cases</List.Item></a>
+                                <a href="http://covid19hack.pythonanywhere.com/shop/">  <List.Item as='a'>Shop</List.Item></a>
                             </List>
                         </Grid.Column>
                         {/* <Grid.Column width={3}>
